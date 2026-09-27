@@ -1,0 +1,84 @@
+/* WD Kampanya – yönetim paneli */
+.wdkm-wrap { max-width: 1400px; }
+.wdkm-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.wdkm-top .page-title-action { position: static; }
+.wdkm-brand { margin-left: auto; font-size: 12px; color: #8c8f94; letter-spacing: .04em; text-transform: uppercase; }
+.wdkm-lead { max-width: 920px; margin: 10px 0 14px; }
+.wdkm-dim { color: #8c8f94; font-size: 12px; }
+.wdkm-neg { color: #c92a2a; font-weight: 600; }
+.wdkm-empty { background: #fff; border: 1px dashed #c3c4c7; border-radius: 10px; padding: 28px; text-align: center; margin-top: 12px; }
+.wdkm-panel { background: #fff; border: 1px solid #e0e0e3; border-radius: 10px; padding: 16px 20px; margin-bottom: 16px; }
+.wdkm-panel h2, .wdkm-panel h3 { font-size: 15px; margin: 0 0 12px; }
+.wdkm-chip { display: inline-block; margin-top: 3px; padding: 1px 8px; border-radius: 999px; background: #fff0e6; color: #c2410c; font-size: 11px; font-weight: 600; }
+
+.wdkm-table td, .wdkm-table th { vertical-align: middle; }
+.wdkm-table .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.wdkm-row-actions { white-space: nowrap; }
+.wdkm-row-actions .button { margin-right: 4px; }
+.wdkm-del { color: #b32d2e; }
+.wdkm-state { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; background: #f0f0f1; color: #50575e; white-space: nowrap; }
+.wdkm-state--live { background: #d3f9d8; color: #2b8a3e; }
+.wdkm-state--scheduled { background: #d0ebff; color: #0b5394; }
+.wdkm-state--paused, .wdkm-state--ended { background: #fff3bf; color: #7a5b00; }
+.wdkm-state--draft { background: #f0f0f1; }
+
+/* Form */
+.wdkm-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 16px; align-items: start; }
+@media (max-width: 1100px) { .wdkm-layout { grid-template-columns: 1fr; } }
+.wdkm-name { display: flex; flex-direction: column; gap: 6px; font-weight: 600; }
+.wdkm-name input { font-size: 18px; padding: 8px 12px; }
+.wdkm-types { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.wdkm-type { position: relative; display: block; border: 1px solid #dcdcde; border-radius: 10px; padding: 12px 14px; cursor: pointer; transition: border-color .15s, box-shadow .15s; }
+.wdkm-type:hover { border-color: #8c8f94; }
+.wdkm-type input { position: absolute; opacity: 0; }
+.wdkm-type span { display: flex; flex-direction: column; gap: 4px; }
+.wdkm-type small { color: #646970; line-height: 1.4; }
+.wdkm-type.is-on { border-color: #c2410c; box-shadow: 0 0 0 1px #c2410c inset; background: #fffaf6; }
+.wdkm-sentence { font-size: 15px; line-height: 2.2; }
+.wdkm-sentence input.small-text { width: 70px; text-align: center; }
+.wdkm-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+@media (max-width: 960px) { .wdkm-grid2 { grid-template-columns: 1fr; } }
+.wdkm-grid2 > div > label { display: block; font-weight: 600; margin-bottom: 4px; }
+.wdkm-checks label { display: inline-block; margin: 0 14px 6px 0; }
+.wdkm-tiers { margin-bottom: 8px; }
+.wdkm-tier-del { color: #b32d2e !important; }
+.wdkm-side label { display: block; font-weight: 600; }
+.wdkm-side label input[type=radio] { margin-right: 4px; }
+.wdkm-side select, .wdkm-side input[type=datetime-local], .wdkm-side input[type=number].widefat { margin-top: 4px; }
+.wdkm-submit { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 0; }
+
+/* Simülatör */
+.wdkm-sim-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 20px; }
+@media (max-width: 1100px) { .wdkm-sim-grid { grid-template-columns: 1fr; } }
+.wdkm-sim-form h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: #646970; margin: 0 0 8px; }
+.wdkm-sim-c { display: block; margin: 0 0 6px; }
+.wdkm-presets .button { margin: 0 4px 4px 0; }
+.wdkm-result__title { font-size: 18px; margin: 24px 0 10px; }
+.wdkm-verdict { background: #fff8f1; border: 1px solid #ffd8a8; border-left: 4px solid #c2410c; border-radius: 8px; padding: 14px 18px; font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
+.wdkm-verdict.is-none { background: #f6f7f7; border-color: #dcdcde; border-left-color: #8c8f94; }
+.wdkm-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.wdkm-card { background: #fff; border: 1px solid #e0e0e3; border-radius: 10px; padding: 14px 18px; display: flex; flex-direction: column; gap: 4px; }
+.wdkm-card span { font-size: 12px; color: #646970; text-transform: uppercase; letter-spacing: .04em; }
+.wdkm-card strong { font-size: 24px; font-weight: 600; }
+.wdkm-card em { font-style: normal; font-size: 12px; color: #646970; }
+.wdkm-card--accent { background: #1d2327; border-color: #1d2327; color: #fff; }
+.wdkm-card--accent span, .wdkm-card--accent em { color: #c3c4c7; }
+.wdkm-card--accent .woocommerce-Price-amount { color: #fff; }
+.wdkm-near { border-left: 4px solid #1c7ed6; }
+.wdkm-bars { display: grid; gap: 8px; }
+.wdkm-bar { display: grid; grid-template-columns: 110px 1fr 90px; gap: 10px; align-items: center; font-size: 13px; }
+.wdkm-bar__t { height: 10px; background: #f0f0f1; border-radius: 999px; overflow: hidden; }
+.wdkm-bar__t i { display: block; height: 100%; background: #c2410c; border-radius: 999px; }
+.wdkm-bar__v { text-align: right; color: #646970; }
+.wdkm-days { display: flex; align-items: flex-end; gap: 3px; height: 120px; padding: 4px 0; border-bottom: 1px solid #dcdcde; }
+.wdkm-day { flex: 1; height: 100%; display: flex; align-items: flex-end; }
+.wdkm-day i { display: block; width: 100%; background: #f76707; border-radius: 3px 3px 0 0; min-height: 2px; }
+.wdkm-day:hover i { background: #c2410c; }
+.wdkm-days__axis { display: flex; justify-content: space-between; font-size: 11px; color: #8c8f94; margin-top: 4px; }
+.wdkm-assume { margin-top: 4px; }
+
+.wdkm-periods { display: inline-flex; background: #fff; border: 1px solid #dcdcde; border-radius: 8px; overflow: hidden; margin: 10px 0 18px; }
+.wdkm-periods a { padding: 7px 14px; text-decoration: none; color: #1d2327; border-right: 1px solid #dcdcde; font-size: 13px; }
+.wdkm-periods a:last-child { border-right: 0; }
+.wdkm-periods a.is-active { background: #1d2327; color: #fff; }
+.wdkm-card strong .woocommerce-Price-amount, .wdkm-card strong bdi { font-size: inherit; font-weight: inherit; }
